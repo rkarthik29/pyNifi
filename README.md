@@ -34,7 +34,7 @@ The file /Users/knarayanan/test.txt was successfully sent to fromnifi with check
 
 Alternately, you can use the send.py to test the functionality as follows
 
-python send.py [filename with path] [input port name]
+python send.py [nifi host] [nifi web ui port] [filename with path] [input port name]
 
 
 
