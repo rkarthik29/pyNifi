@@ -10,7 +10,7 @@ class pyNifi(object):
         self.port=port
         self.input_ports=[]
         self.__lists2sPorts()
-        self.crc=binascii.crc32('')
+        #self.crc=binascii.crc32('')
     
     
     def __lists2sPorts(self):
@@ -52,6 +52,7 @@ class pyNifi(object):
     
     def sendFile(self,filename,portName,attributes=None):
         s2sPortId=None
+	self.crc=binascii.crc32('')
         for inputPort in self.input_ports:
             if inputPort['name']==portName:
                 if(inputPort['state']!='RUNNING'):
