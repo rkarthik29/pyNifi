@@ -31,7 +31,7 @@ class pyNifi(object):
                 data+= struct.pack(">i",int(len(v)))
                 value = v
                 data+= value
-            data+=struct.pack(">q",longtotalsize)
+            data+=struct.pack(">q",totalsize)
             self.crc=binascii.crc32(data,self.crc)
             yield data
         else:
